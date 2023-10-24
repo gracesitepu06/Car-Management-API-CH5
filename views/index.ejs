@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Challenge-CH5</h1>
+    <table>
+        <th>No</th>
+        <th>Name</th>
+        <th>Image</th>
+        <th>Price</th>
+        <% cars.map((car)=> { %>
+            <tr>
+                <td>
+                    <%= car.id %>
+                </td>
+                <td>
+                    <%= car.name %>
+                </td>
+                <td>
+                    <img src="<%= car.imageUrl %>" alt="<%= car.name %>" style="width: 700px; height: 400px">
+                </td>
+                <!-- Assuming there is a price property in the car object -->
+                <td>
+                    <%= car.price %>
+                </td>
+            </tr>
+            <% }); %>
+    </table>
+</body>
+
+</html>
